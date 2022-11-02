@@ -155,7 +155,8 @@ const JobDetailedPage = () => {
                                 </div>
 
                                 <div className="job-detailed-map">
-                                    <Map apikey={API_KEY}/>
+                                    {isLoaded ? <Map apikey={API_KEY}/> : <h3>help</h3>}
+                                    <Map center={centerDef} apikey={API_KEY}/>
                                 </div>
 
                             </div>

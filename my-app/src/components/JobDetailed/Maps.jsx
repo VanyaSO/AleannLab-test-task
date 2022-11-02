@@ -22,7 +22,7 @@ const Map = ({center}) => {
     return(
         <div className='map'>
             <GoogleMap
-                mapContainerClassName='containerStyle'
+                mapContainerClassName={containerStyle}
                 center={center}
                 zoom={10}
                 onLoad={onLoad}
