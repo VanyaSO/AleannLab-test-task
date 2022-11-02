@@ -33,7 +33,6 @@ const JobDetailedPage = () => {
 
     // Тут у меня не получилось сделать через Array.find(),
     // поэтому пришлось сделать так, знаю что не правильно но другого выхода я не нашел,
-    // очень долго сидел над этой проблемой
     const job = jobsList.filter(item => item.name === name);
 
     const goBack = useCallback(() => {

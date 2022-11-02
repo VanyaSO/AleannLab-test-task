@@ -20,7 +20,7 @@ const Map = ({center}) => {
     }, [])
 
     return(
-        <div className='map'>
+        <div className='map-container'>
             <GoogleMap
                 mapContainerClassName={containerStyle}
                 center={center}
