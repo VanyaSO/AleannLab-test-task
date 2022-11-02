@@ -5,7 +5,9 @@ import CircularIndeterminate from "./Load";
 import {queryState} from "./query-state";
 import AdditionalInfo from "./JobDetailed/AdditionalInfo"
 import AttachedImages from "./JobDetailed/AttachedImages"
-import SimpleMap from "./JobDetailed/Maps";
+import {useJsApiLoader} from "@react-google-maps/api";
+import Map from "./JobDetailed/Maps";
+
 
 const JobDetailedPage = () => {
     const [jobsList, setJobsList] = useState([]);
@@ -42,6 +44,18 @@ const JobDetailedPage = () => {
     const isSuccess = jobsQueryStatus === queryState.success
     const isError = jobsQueryError === queryState.error
 
+    const API_KEY = process.env.REACT_APP_API_KEA;
+
+    const centerDef = {
+        lat: -3.745,
+        lng: -38.523
+    };
+
+    const { isLoaded } = useJsApiLoader({
+        id: 'google-map-script',
+        googleMapsApiKey: API_KEY,
+    })
+
     return(
         <>
             {isLoading && (
@@ -52,7 +66,6 @@ const JobDetailedPage = () => {
                 <>
                     {job.map((job) => (
                         <div key={job.id} className="job-detailed">
-
                             <div  className="container">
                                 <div className="job-detailed-info">
                                     <div className='job-detailed-info-top-panel line-divisions'>
@@ -141,10 +154,10 @@ const JobDetailedPage = () => {
                                     </button>
                                 </div>
 
-                                {/*<div className="job-detailed-map">*/}
-                                {/*</div>*/}
+                                <div className="job-detailed-map">
+                                    <Map apikey={API_KEY}/>
+                                </div>
 
-                                <SimpleMap/>
                             </div>
 
                         </div>
