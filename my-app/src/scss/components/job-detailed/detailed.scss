@@ -1,0 +1,194 @@
+.job-detailed{
+  padding:  56px 0  162px 0;
+
+  .job-detailed-info{
+    max-width: 650px;
+
+    .title-divisions{
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 34px;
+      letter-spacing: 0.413333px;
+      color: #3A4562;
+    }
+
+    .line-divisions{
+      padding-bottom: 9px;
+      border-bottom: 1px solid rgba(58, 69, 98, 0.13);
+    }
+
+    &-top-panel{
+      display: flex;
+      justify-content: space-between;
+
+      .detailed-dop-funks{
+        display: flex;
+        .dop-funk{
+          display: flex;
+          align-items: center;
+          margin-left: 30px;
+          img{
+            margin-right: 15px;
+            &:hover{
+              @extend %hover;
+            }
+          }
+          p{
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 24px;
+            letter-spacing: -0.5625px;
+            color: #3A4562;
+          }
+        }
+      }
+
+    }
+
+    .btn-apply{
+      padding: 18px 30px;
+      background: #384564;
+      border-radius: 8px;
+      border: none;
+      color: white;
+      margin-top: 40px;
+      &:hover{
+        @extend %hover;
+        opacity: .8;
+      }
+    }
+
+    .info-about-job{
+      margin-top: 32px;
+      .job-title-salary{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 7px;
+        .job-title{
+          max-width: 470px;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 24px;
+          line-height: 30px;
+          letter-spacing: -0.75px;
+          color: #3A4562;
+        }
+        .job-salary{
+          h3{
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 25px;
+            letter-spacing: -0.625px;
+            color: #3A4562;
+          }
+          p{
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 24px;
+            letter-spacing: -0.5625px;
+            color: #3A4562;
+          }
+        }
+      }
+      .job-description{
+        .data-post{
+          @extend %silverTextP;
+          margin-bottom: 7px;
+        }
+        .description-text{
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 24px;
+          letter-spacing: -0.5625px;
+          color: #3A4562;
+          margin-bottom: 30px;
+        }
+        .description-title{
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 25px;
+          letter-spacing: -0.625px;
+          color: #3A4562;
+          margin: 40px 0 25px;
+        }
+        .description-compensation{
+          padding: 0;
+          li{
+            margin: 0;
+            list-style-image: url("../public/images/list-marker-ul.png");
+          }
+        }
+      }
+    }
+
+    .additional-info{
+      margin-top: 87px;
+      &-item{
+        margin-right: 10px;
+        padding: 18px;
+        max-width: 222px;
+        width: 100%;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 16px;
+        text-align: center;
+        letter-spacing: -0.457143px;
+        border-radius: 8px;
+        display: inline-block;
+      }
+      .blue{
+        color: #55699E;
+        background: rgba(161, 177, 219, 0.317343);
+        border: 1px solid rgba(85, 105, 158, 0.3);
+      }
+      .gold{
+        color: #988B49;
+        background: rgba(255, 207, 0, 0.15);
+        border: 1px solid #FFCF00;
+      }
+      p{
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: -0.5625px;
+        color: #3A4562;
+        margin: 20px 0 10px;
+      }
+    }
+
+    .attached-images{
+      margin-top: 87px;
+      img{
+        border-radius: 8px;
+        display: inline-block;
+        margin: 16px 10px 0 0 ;
+      }
+    }
+    
+    .btn-back{
+      margin-top: 100px;
+      //margin-left: -79px;
+      display: flex;
+      align-items: center;
+      background: rgba(56, 69, 100, 0.14);
+      mix-blend-mode: normal;
+      border-radius: 8px;
+      border: none;
+      padding: 16px 23px;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 16px;
+      text-align: center;
+      text-transform: uppercase;
+      color: #3A4562;
+      img{
+        margin-right: 19px;
+      }
+      &:hover{
+        @extend %hover;
+      }
+    }
+
+  }
+
+}

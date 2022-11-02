@@ -1,0 +1,81 @@
+@media (max-width: $content-widthLg) {
+  .css-1vooibu-MuiSvgIcon-root{
+    width: 15px !important;
+  }
+
+  .job-list{
+    .job-card{
+      padding: 13px 16px 27px;
+
+      .job-card-content{
+        flex-direction: column;
+        .job-card-img{
+          margin-right: 19px;
+          img{
+            width: 66px;
+            margin-top: 45px;
+          }
+        }
+
+        .job-card-text{
+          display: none;
+        }
+
+        .job-card-text-mob{
+          width: 100%;
+          display: block;
+          margin-top: 17px;
+          max-width: none;
+          a{
+            margin-bottom: 5px;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 24px;
+            letter-spacing: -0.5625px;
+          }
+          p{
+            margin-bottom: 8px;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 17px;
+            letter-spacing: 0.206667px;
+          }
+          .job-card-text-location{
+            display: flex;
+            align-items: center;
+
+            p{
+              margin: 0 0 0 8px;
+            }
+          }
+        }
+
+        .job-card-rating{
+          margin-right: 0;
+        }
+
+        .job-card-marker{
+          justify-content: center;
+          img{
+            display: none;//
+          }
+          p{
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 17px;
+            letter-spacing: 0.206667px;
+          }
+        }
+      }
+
+      .job-card-content-bottom{
+        width: 100%;
+        span{
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+    }
+
+  }
+}

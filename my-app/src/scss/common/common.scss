@@ -1,0 +1,33 @@
+*{
+  color:black;
+  font-family: 'Roboto', sans-serif;
+  text-decoration: none;
+}
+ html, body{
+   overflow-x:hidden;
+   background: #F5F5F5;
+ }
+.container{
+  max-width: $content-width;
+  margin: 0 auto;
+}
+
+@media (max-width: $content-width) {
+  .container{max-width: $content-widthXl;}
+}
+
+@media (max-width: $content-widthXl) {
+  .container{max-width: $content-widthLg;}
+}
+
+@media (max-width: $content-widthLg) {
+  .container{max-width: $content-widthMd;}
+}
+
+@media (max-width: $content-widthMd) {
+  .container{
+    max-width: $content-widthSm;
+    padding: 0 9px;
+  }
+}
+
