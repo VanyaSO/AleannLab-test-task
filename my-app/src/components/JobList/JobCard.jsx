@@ -51,7 +51,9 @@ const JobCard = ( {props} ) => {
                 </span>
 
                     <div className="job-card-text-mob">
-                        <h3>{title}</h3>
+                        <Link to={`/${name}`} className="job-card-text-title">
+                            {title}
+                        </Link>
                         <p>Department name • {name}</p>
                         <div className='job-card-text-location'>
                             <img src="./images/job-card-location.png"/>

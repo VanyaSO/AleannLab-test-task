@@ -6,9 +6,13 @@ const JobDetailedPage = ({itemsArr, text, classColor}) => {
         <>
             {text ? <p>{text}</p> : null}
 
-            {itemsArr ? itemsArr.map((item) => (
-                <span className={`additional-info-item ${classColor}`}>{item}</span>
-            )) : null}
+            <div className='job-info-work-content'>
+                {itemsArr ? itemsArr.map((item) => (
+                    <span className={`additional-info-item ${classColor}`}>{item}</span>
+
+
+                )) : null}
+            </div>
         </>
     )
 }

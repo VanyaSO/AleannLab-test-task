@@ -21,7 +21,11 @@
 }
 
 @media (max-width: $content-widthLg) {
-  .container{max-width: $content-widthMd;}
+  .container{
+    max-width: $content-widthMd;
+    padding: 0 9px;
+  }
+
 }
 
 @media (max-width: $content-widthMd) {

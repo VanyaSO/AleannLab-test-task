@@ -43,17 +43,17 @@ const JobDetailedPage = () => {
     const isSuccess = jobsQueryStatus === queryState.success
     const isError = jobsQueryError === queryState.error
 
-    const API_KEY = process.env.REACT_APP_API_KEA;
+    // const API_KEY = process.env.REACT_APP_API_KEA;
 
-    const centerDef = {
-        lat: -3.745,
-        lng: -38.523
-    };
-
-    const { isLoaded } = useJsApiLoader({
-        id: 'google-map-script',
-        googleMapsApiKey: API_KEY,
-    })
+    // const centerDef = {
+    //     lat: -3.745,
+    //     lng: -38.523
+    // };
+    //
+    // const { isLoaded } = useJsApiLoader({
+    //     id: 'google-map-script',
+    //     googleMapsApiKey: API_KEY,
+    // })
 
     return(
         <>
@@ -84,19 +84,38 @@ const JobDetailedPage = () => {
                                         </div>
                                     </div>
 
-                                    <button className="btn-apply">Apply now</button>
+                                    <div className='detailed-dop-funks-mob'>
+                                            <span className='dop-funk'>
+                                                <img src="./images/star.png" />
+                                                <p>Save to my list</p>
+                                            </span>
+                                        <span className='dop-funk'>
+                                                <img src="./images/shape-icon.png" />
+                                                <p>Share</p>
+                                        </span>
+                                    </div>
+
+
+                                    <button className="btn-apply mob-none">Apply now</button>
 
                                     <div className="info-about-job">
                                         <div className='job-title-salary'>
                                             <h3 className='job-title'>{job.title}</h3>
 
-                                            <div className='job-salary'>
+                                            <div className='job-salary mob-none'>
                                                 <h3>&#8364; {job.salary}</h3>
                                                 <p>Brutto, per year</p>
                                             </div>
                                         </div>
                                         <div className="job-description">
-                                            <p className="data-post">Posted 2 days ago</p>
+                                            <div className='data-salary-post-mob'>
+                                                <p className="data-post">Posted 2 days ago</p>
+
+                                                <div className='job-salary'>
+                                                    <h3>&#8364; {job.salary}</h3>
+                                                    <p>Brutto, per year</p>
+                                                </div>
+                                            </div>
                                             <p className='description-text'>{job.description}</p>
                                             <h3 className='description-title'>Responsopilities</h3>
                                             <p className='description-text'>
@@ -130,22 +149,22 @@ const JobDetailedPage = () => {
                                                 <li className='description-text'>Occurrence-based Malpractice Coverage</li>
                                                 <li className='description-text'>Short-term and Long-term Disability Insurance and life insurance</li>
                                             </ul>
-
-
                                         </div>
                                     </div>
 
                                     <button className="btn-apply">Apply now</button>
 
-                                    <div className="additional-info">
-                                        <h3 className='title-divisions line-divisions'>Additional info</h3>
-                                        <AdditionalInfo classColor={"blue"} text={"Employment type"} itemsArr={job.employment_type}/>
-                                        <AdditionalInfo classColor={"gold"} text={"Benefits"} itemsArr={job.benefits}/>
-                                    </div>
+                                    <div className='job-info-work'>
+                                        <div className="additional-info">
+                                            <h3 className='title-divisions line-divisions'>Additional info</h3>
+                                            <AdditionalInfo classColor={"blue"} text={"Employment type"} itemsArr={job.employment_type}/>
+                                            <AdditionalInfo classColor={"gold"} text={"Benefits"} itemsArr={job.benefits}/>
+                                        </div>
 
-                                    <div className="attached-images">
-                                        <h3 className='title-divisions line-divisions'>Attached images</h3>
-                                        <AttachedImages itemsArr={job.pictures}/>
+                                        <div className="attached-images">
+                                            <h3 className='title-divisions line-divisions'>Attached images</h3>
+                                            <AttachedImages itemsArr={job.pictures}/>
+                                        </div>
                                     </div>
 
                                     <button className='btn-back' onClick={goBack} >
@@ -153,8 +172,19 @@ const JobDetailedPage = () => {
                                     </button>
                                 </div>
 
+                                <h3 className='title-divisions line-divisions desk-none'>Contacts</h3>
                                 <div className="job-detailed-map">
-                                    {isLoaded ? <Map center={centerDef} apikey={API_KEY}/> : <h3>help</h3>}
+                                    <div className='job-detailed-map-text'>
+                                        <h3>Department name.</h3>
+                                        <h3>University Hospital Giessen.</h3>
+                                        <address>
+                                            <img src="./images/job-card-location.png"/>
+                                            {job.address}
+                                        </address>
+                                        <p>{job.email}</p>
+                                        <p>{job.phone}</p>
+                                    </div>
+                                    {/*{isLoaded ? <Map center={centerDef} apikey={API_KEY}/> : <h3>help</h3>}*/}
                                 </div>
 
                             </div>
